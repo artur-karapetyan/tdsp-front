@@ -4,9 +4,10 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-function handleClick(event) {
-  if (event.target.value === "") {
-    event.target.value = "";
+function handleClick(event: React.MouseEvent<HTMLInputElement>) {
+  const target = event.target as HTMLInputElement;
+  if (target.value === "") {
+    target.value = "";
   }
 }
 
