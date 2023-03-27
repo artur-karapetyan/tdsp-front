@@ -79,7 +79,7 @@ export default function Test(props: TestProps) {
   if (query.isSuccess)
     return (
       <div>
-        <img src={query.data.image_url} />
+        {/* <img src={query.data.image_url} /> */}
         <p>
           {query.data.cat.map((category, index) => (
             <p key={index}>{category}</p>
