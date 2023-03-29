@@ -50,6 +50,7 @@ export default function Campaigns(props: Props) {
 
   const query = useQuery({
     queryKey: ["campaign", page],
+    cacheTime: 0,
     queryFn: fetcherGenerator(page),
   });
 
@@ -109,7 +110,7 @@ export default function Campaigns(props: Props) {
         {data.map((item) => (
           <div
             key={item.id}
-            className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden gap-2.5 px-[5px] py-1 bg-neutral-100"
+            className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden gap-2.5 px-[5px] py-1 bg-neutral-100 hover:bg-[#85b0ed] duration-200"
           >
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 w-[170px] relative overflow-hidden gap-2.5 px-[19px]">
               <input

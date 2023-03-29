@@ -31,6 +31,12 @@ export default function Login() {
       if (response.data.user_type === "Admin" && response.status === 200) {
         document.cookie = `token=${response.data.access_token}`;
         router.push("/");
+      } else if (
+        response.data.user_type === "AdOps" &&
+        response.status === 200
+      ) {
+        document.cookie = `token=${response.data.access_token}`;
+        router.push("/adops");
       } else {
         setLoginError("Invalid username or password.");
       }

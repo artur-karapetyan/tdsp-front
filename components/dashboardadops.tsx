@@ -5,7 +5,7 @@ import { Josefin_Sans } from "next/font/google";
 
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
-export default function Dashboard() {
+export default function DashboardAdops() {
   const router = useRouter();
 
   function removeCookie(name: string) {
@@ -25,36 +25,20 @@ export default function Dashboard() {
     handleLogout();
   };
 
-  const handleRequestClick = () => {
-    router.push("/bid_request");
-  };
-
   const handleLogoClick = () => {
-    router.push("/");
-  };
-
-  const handleResponseClick = () => {
-    router.push("/bid_response");
-  };
-
-  const handleCategoryClick = () => {
-    router.push("/categories");
+    router.push("/adops");
   };
 
   const handleNotifyClick = () => {
-    router.push("/notification");
+    router.push("/notification_adops");
   };
 
   const handleConfigClick = () => {
-    router.push("/configuration");
-  };
-
-  const handleCreativeClick = () => {
-    router.push("/creative");
+    router.push("/configuration_adops");
   };
 
   const handleCampaignClick = () => {
-    router.push("/campaign");
+    router.push("/campaign_adops");
   };
 
   return (
@@ -71,34 +55,10 @@ export default function Dashboard() {
         The Interns
       </button>
       <button
-        onClick={handleRequestClick}
-        className="flex-grow-0 flex-shrink-0 w-[257px] h-10 text-xl font-medium text-left px-10 text-[#ecf2f7] hover:bg-[#253347] duration-200"
-      >
-        Bid Request
-      </button>
-      <button
-        onClick={handleResponseClick}
-        className="flex-grow-0 flex-shrink-0 w-[257px] h-10 text-xl font-medium text-left px-10 text-[#ecf2f7] hover:bg-[#253347] duration-200"
-      >
-        Bid Response
-      </button>
-      <button
-        onClick={handleCreativeClick}
-        className="flex-grow-0 flex-shrink-0 w-[257px] h-10 text-xl font-medium text-left px-10 text-[#ecf2f7] hover:bg-[#253347] duration-200"
-      >
-        Creative
-      </button>
-      <button
         onClick={handleCampaignClick}
         className="flex-grow-0 flex-shrink-0 w-[257px] h-10 text-xl font-medium text-left px-10 text-[#ecf2f7] hover:bg-[#253347] duration-200"
       >
         Campaign
-      </button>
-      <button
-        onClick={handleCategoryClick}
-        className="flex-grow-0 flex-shrink-0 w-[257px] h-10 text-xl font-medium text-left px-10 text-[#ecf2f7] hover:bg-[#253347] duration-200"
-      >
-        Category
       </button>
       <button
         onClick={handleConfigClick}
