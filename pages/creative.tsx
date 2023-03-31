@@ -1,14 +1,17 @@
 import Head from "next/head";
 import { Josefin_Sans } from "next/font/google";
 import DashboardComponent from "@/components/dashboard";
-import Test from "@/components/test";
-import { useRouter } from "next/router";
-import Bid from "@/components/bid_req";
-import { useState } from "react";
 import Creatives from "@/components/creatives";
+import { useRouter } from "next/router";
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
-export default function Bid_Request() {
+export default function Creative() {
+  const router = useRouter();
+
+  const handleCreateClick = () => {
+    router.push("/creative/create");
+  };
+
   return (
     <>
       <Head>
@@ -17,11 +20,17 @@ export default function Bid_Request() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <DashboardComponent />
-      <div className="flex flex-col w-full h-full relative bg-[#ecf2f7] pl-60">
+      <div className="flex flex-col overflow-auto w-full h-full relative bg-[#ecf2f7] pl-60">
         <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-full h-[75px] overflow-hidden gap-2.5 px-[5px] py-4 bg-neutral-100 border-t-0 border-r-0 border-b-[5px] border-l-0 border-[#c0c9ee]">
           <p className="flex-grow-0 flex-shrink-0 text-xl text-center text-black max-w-full">
             Creative
           </p>
+          <button
+            onClick={handleCreateClick}
+            className="flex-grow-0 flex-shrink-0 w-[106px] h-10 text-xl font-medium text-center absolute left-[1350px] top-[15px] rounded-md border-2 border-[#c0c9ee] bg-[#ecf2f7] text-[#7ba5c7] hover:bg-[#b2cdf5] duration-200"
+          >
+            Create
+          </button>
         </div>
         <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 h-[693px] w-full relative gap-2.5 px-2.5 py-[30px]">
           <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[910px] h-[600px] overflow-hidden gap-2.5">

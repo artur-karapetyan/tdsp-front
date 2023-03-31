@@ -76,6 +76,7 @@ export default function AdOps() {
                 className="flex-grow-0 flex-shrink-0 w-[187px] h-[41px] relative overflow-hidden"
               >
                 <input
+                  placeholder="0"
                   type={"number"}
                   defaultValue={minBid}
                   className="flex-grow-0 flex-shrink-0 w-[187px] h-[41px] text-center text-xl relative overflow-hidden bg-[#ecf2f7] border-2 border-[#3193f5]"

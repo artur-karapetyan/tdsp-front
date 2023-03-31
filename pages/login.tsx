@@ -36,7 +36,7 @@ export default function Login() {
         response.status === 200
       ) {
         document.cookie = `token=${response.data.access_token}`;
-        router.push("/adops");
+        router.push("/dashboard");
       } else {
         setLoginError("Invalid username or password.");
       }

@@ -98,7 +98,7 @@ export default function Bid_response(props: Props) {
               r="22.5"
               fill="#E6E5E5"
               stroke="#B4B1B1"
-              stroke-width={2}
+              strokeWidth={2}
               className="hover:fill-[#85b0ed] duration-200"
             />
             <path
@@ -123,7 +123,7 @@ export default function Bid_response(props: Props) {
               r="22.5"
               fill="#E6E5E5"
               stroke="#B4B1B1"
-              stroke-width={2}
+              strokeWidth={2}
               className="hover:fill-[#85b0ed] duration-200"
             />
             <path

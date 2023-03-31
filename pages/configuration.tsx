@@ -5,7 +5,7 @@ import Notify from "@/components/notify";
 import Configure from "@/components/configure";
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
-export default function Bid_Request() {
+export default function Configuration() {
   return (
     <>
       <Head>

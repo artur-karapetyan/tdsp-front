@@ -26,7 +26,7 @@ export default function DashboardAdops() {
   };
 
   const handleLogoClick = () => {
-    router.push("/adops");
+    router.push("/dashboard");
   };
 
   const handleNotifyClick = () => {

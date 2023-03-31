@@ -4,7 +4,7 @@ import DashboardComponent from "@/components/dashboard";
 import Category from "@/components/category";
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
-export default function Bid_Request() {
+export default function Categories() {
   return (
     <>
       <Head>

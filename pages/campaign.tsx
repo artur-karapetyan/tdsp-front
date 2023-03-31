@@ -2,9 +2,16 @@ import Head from "next/head";
 import { Josefin_Sans } from "next/font/google";
 import DashboardComponent from "@/components/dashboard";
 import Campaigns from "@/components/campaigns";
+import { useRouter } from "next/router";
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
-export default function Bid_Request() {
+export default function Campaign() {
+  const router = useRouter();
+
+  const handleCreateClick = () => {
+    router.push("/campaign/create");
+  };
+
   return (
     <>
       <Head>
@@ -18,6 +25,12 @@ export default function Bid_Request() {
           <p className="flex-grow-0 flex-shrink-0 text-xl text-center text-black max-w-full">
             Campaign
           </p>
+          <button
+            onClick={handleCreateClick}
+            className="flex-grow-0 flex-shrink-0 w-[106px] h-10 text-xl font-medium text-center absolute left-[1350px] top-[15px] rounded-md border-2 border-[#c0c9ee] bg-[#ecf2f7] text-[#7ba5c7] hover:bg-[#b2cdf5] duration-200"
+          >
+            Create
+          </button>
         </div>
         <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 h-[693px] w-full relative gap-2.5 px-2.5 py-[30px]">
           <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 h-[550px] w-[900px] overflow-hidden gap-2.5 py-2.5">

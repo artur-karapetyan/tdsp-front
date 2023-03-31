@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useQueryClient } from "react-query";
+import DashboardAdops from "@/components/dashboardadops";
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
 export default function Dashboard() {
@@ -77,6 +78,7 @@ export default function Dashboard() {
                 className="flex-grow-0 flex-shrink-0 w-[187px] h-[41px] relative overflow-hidden"
               >
                 <input
+                  placeholder="0"
                   type={"number"}
                   defaultValue={minBid}
                   className="flex-grow-0 flex-shrink-0 w-[187px] h-[41px] text-center text-xl relative overflow-hidden bg-[#ecf2f7] border-2 border-[#3193f5]"

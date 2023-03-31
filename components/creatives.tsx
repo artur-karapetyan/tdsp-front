@@ -69,7 +69,7 @@ export default function Creatives(props: Props) {
         {data.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 w-[295px] relative overflow-hidden gap-2.5 p-[5px] bg-neutral-100 border-2 border-[#c0c9ee]"
+            className="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 w-[290px] relative overflow-hidden gap-2.5 p-[5px] bg-neutral-100 border-2 border-[#c0c9ee]"
           >
             <div className="flex-grow-0 flex-shrink-0 w-[280px] h-[280px] relative overflow-hidden">
               <img src={item.url} />
@@ -140,7 +140,7 @@ export default function Creatives(props: Props) {
               r="22.5"
               fill="#E6E5E5"
               stroke="#B4B1B1"
-              stroke-width={2}
+              strokeWidth={2}
               className="hover:fill-[#85b0ed] duration-200"
             />
             <path
@@ -165,7 +165,7 @@ export default function Creatives(props: Props) {
               r="22.5"
               fill="#E6E5E5"
               stroke="#B4B1B1"
-              stroke-width={2}
+              strokeWidth={2}
               className="hover:fill-[#85b0ed] duration-200"
             />
             <path
