@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useQueryClient } from "react-query";
-import DashboardAdops from "@/components/dashboardadops";
 const Josefin = Josefin_Sans({ subsets: ["latin"], variable: "--josefin" });
 
 export default function Dashboard() {
@@ -29,7 +28,7 @@ export default function Dashboard() {
   const handleBidChange = async (newMinBid: number) => {
     const token = getCookie("token");
     await axios.patch(
-      `http://0.0.0.0:9090/api/campaigns/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/`,
       {
         min_bid: newMinBid,
       },
@@ -58,7 +57,6 @@ export default function Dashboard() {
             Welcome to Admin tDSP
           </p>
         </div>
-        {/* content here */}
         <div className="flex flex-col overflow-y-scroll">
           <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 h-[693px] w-full gap-2.5 px-2.5 py-[70px]">
             <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 h-[300px] w-[440px] relative overflow-hidden gap-[60px] bg-white border-2 border-[#3193f5]">

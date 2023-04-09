@@ -28,7 +28,7 @@ function fetcherGenerator(page: number) {
   return async function (): Promise<FetcherResult> {
     const token = getCookie("token");
     const response = await axios.get<FetcherResult>(
-      `http://0.0.0.0:9090/api/creatives/${page}/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/creatives/${page}/`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -28,7 +28,7 @@ export default function AdOps() {
   const handleBidChange = async (newMinBid: number) => {
     const token = getCookie("token");
     await axios.patch(
-      `http://0.0.0.0:9090/api/campaigns/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/`,
       {
         min_bid: newMinBid,
       },

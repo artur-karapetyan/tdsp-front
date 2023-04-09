@@ -18,7 +18,7 @@ function getCookie(name: string) {
 async function getCategories() {
   const token = getCookie("token");
   const response = await axios.get<string[]>(
-    "http://0.0.0.0:9090/api/categories/",
+    `http://${process.env.NEXT_PUBLIC_HOST}/api/categories/`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -31,7 +31,7 @@ async function getCategories() {
 async function getCampaigns() {
   const token = getCookie("token");
   const response = await axios.get<string[]>(
-    "http://0.0.0.0:9090/api/campaigns/",
+    `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -76,7 +76,7 @@ export default function Create() {
 
     try {
       const response = await axios.post(
-        "http://0.0.0.0:9090/api/creatives/",
+        `http://${process.env.NEXT_PUBLIC_HOST}/api/creatives/`,
         {
           external_id: externalID,
           name: name,

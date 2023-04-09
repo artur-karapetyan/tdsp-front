@@ -18,7 +18,7 @@ function fetcherGenerator(id: string): () => Promise<FetcherResult> {
     const token = getCookie("token");
 
     const response = await axios.post<FetcherResult>(
-      "http://0.0.0.0:9090/rtb/bid/",
+      "http://${process.env.NEXT_PUBLIC_HOST}/rtb/bid/",
       {
         id: id,
         imp: {

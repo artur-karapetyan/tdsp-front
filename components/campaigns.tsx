@@ -28,7 +28,7 @@ function fetcherGenerator(page: number) {
   return async function (): Promise<FetcherResult> {
     const token = getCookie("token");
     const response = await axios.get<FetcherResult>(
-      `http://0.0.0.0:9090/api/campaigns/?page=${page}`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/?page=${page}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ export default function Campaigns(props: Props) {
   const handleCheckboxChange = async (id: number, is_enabled: boolean) => {
     const token = getCookie("token");
     const response = await axios.patch(
-      `http://0.0.0.0:9090/api/campaigns/${id}/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/${id}/`,
       {
         is_enabled: !is_enabled,
       },
@@ -87,7 +87,7 @@ export default function Campaigns(props: Props) {
     const newMinBid = Number((e.target as HTMLInputElement).value);
     const token = getCookie("token");
     await axios.patch(
-      `http://0.0.0.0:9090/api/campaigns/${id}/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/${id}/`,
       {
         min_bid: newMinBid,
       },

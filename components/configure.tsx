@@ -23,7 +23,7 @@ function fetcherGenerator(): () => Promise<FetcherResult> {
   async function fetcher(): Promise<FetcherResult> {
     const token = getCookie("token");
     const response = await axios.get<FetcherResult>(
-      `http://0.0.0.0:9090/game/configure/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/game/configure/`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

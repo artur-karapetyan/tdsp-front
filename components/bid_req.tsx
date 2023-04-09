@@ -32,7 +32,7 @@ function fetcherGenerator(page: number) {
     console.log("bbb", page);
     const token = getCookie("token");
     const response = await axios.get<FetcherResult>(
-      `http://0.0.0.0:9090/api/bid_request/${page}/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/bid_request/${page}/`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

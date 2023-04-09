@@ -21,7 +21,7 @@ export default function Login() {
   const handleLogin = async (username: string, password: string) => {
     try {
       const response = await axios.post<LoginResponse>(
-        "http://0.0.0.0:9090/login/",
+        `http://${process.env.NEXT_PUBLIC_HOST}/login/`,
         {
           username: username,
           password: password,

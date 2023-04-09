@@ -25,7 +25,7 @@ function fetcherGenerator(page: number) {
   return async function (): Promise<FetcherResult> {
     const token = getCookie("token");
     const response = await axios.get<FetcherResult>(
-      `http://0.0.0.0:9090/api/bid_response/${page}/`,
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/bid_response/${page}/`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

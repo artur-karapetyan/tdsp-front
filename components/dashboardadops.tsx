@@ -13,7 +13,9 @@ export default function DashboardAdops() {
   }
 
   const handleLogout = async () => {
-    const response = await axios.post("http://0.0.0.0:9090/logout/");
+    const response = await axios.post(
+      `http://${process.env.NEXT_PUBLIC_HOST}/logout/`
+    );
 
     if (response.status === 200) {
       removeCookie("token");

@@ -23,7 +23,7 @@ export default function Create() {
 
     try {
       const response = await axios.post(
-        "http://0.0.0.0:9090/api/campaigns/",
+        `http://${process.env.NEXT_PUBLIC_HOST}/api/campaigns/`,
         {
           name: name,
           budget: budget,
